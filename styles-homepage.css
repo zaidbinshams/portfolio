@@ -1,0 +1,24 @@
+/* tried to centre image, dont know how yet
+img {
+    align-content: center;
+} */
+
+h2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 350px;
+}
+
+p, ul {
+    background-color: lightgray;
+    color: black;
+}
+
+p {
+    width: 350px;
+}
+
+ul {
+    width: 310px;
+}
