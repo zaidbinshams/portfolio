@@ -1,0 +1,200 @@
+/* GENERAL */
+
+html {
+    box-sizing: border-box;
+    background-color: rgb(0, 13, 19);
+    color: white;
+    /*font will be changed if required*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+button {
+    flex: 1;
+    background-color: rgb(0, 13, 19);
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 12px 24px;
+    /*have to figure out how to add a link to a button*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+/* a {
+    flex: 1;
+    color: white;
+    text-decoration: none;
+    background-color: green;
+} */
+
+.title {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: dotted underline;
+}
+
+.content {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ABOUT */
+
+.about {
+    /* background-color: blue; */
+    display: flex;
+    gap: 32px;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 2px solid white;
+    width: 200px;
+    border-radius: 100px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 400px;
+}
+
+.about .name {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.about .bio {
+    font-size: 16px;
+    /* font-weight: 900; */
+    color: lightgray;
+}
+
+.about-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 6px 18px 0px 0px;
+}
+
+button.blog,
+button.github {
+    /* border: 2px solid black; */
+    background-color: white;
+    color: black;
+}
+
+/* WORK */
+
+.work {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 24px;
+}
+
+/* .work .title {} */
+
+/* .work .content {} */
+
+.work-unit {
+    flex: 1 1 225px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.work-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* .work-timeline {} */
+
+.work-date-roll {
+    font-size: 16px;
+    font-weight: 900;
+    color: lightgray;
+}
+
+.work-lore {
+    font-size: 16px;
+    color: lightgray;
+}
+
+.work-link {
+    font-size: 16px;
+    margin-top: auto;
+    text-decoration: underline;
+}
+
+/* PROJECTS */
+
+.projects {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 24px;
+}
+
+.projects .content {
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .temp {
+    font-weight: 900;
+    color: lightgray;
+}
+
+/* .project-unit {} */
+
+/* .project-title-link {} */
+
+/* .project-stack {} */
+
+/* .project-lore {} */
+
+/* SOCIAL */
+
+.social {
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 24px;
+}
+
+/* .social .title {} */
+
+/* .social .content {} */
+
+/* button.linkedin {} */
+
+/* button.mail {} */
+
+/* button.instagram {} */
+
+/* button.twitter {} */
