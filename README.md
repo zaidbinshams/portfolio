@@ -17,3 +17,12 @@ seems to work decently for now except the buttons in <div class="about">
 - added links to buttons:
 some direct to nowhere, although that is not a technical issue
 - the blog page needs work now
+
+# May 18th, 2025
+stuff to work on:
+- everything is in a div container
+- buttons are weirdly implemented
+- layout can be improved
+- colors can be improved
+- font-family is a mess
+- the bio is outdated
