@@ -1,77 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zaid Bin Shams</title>
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-
-        <div class="about">
-            <img src="./images/zaid-one.jpg" alt="This is me">
-            <div class="about-text">
-                <div class="name">Zaid Bin Shams</div>
-                <div class="bio">I am a <b>19</b> year old <b>web-developer</b> and <b>journalist</b>, with a keen interest in <b>technology</b>, <b>photography</b>, and <b>world politics</b>.</div>
-                <div class="about-buttons">
-                    <a class="button github" href="https://github.com/zaidbinshams" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a class="button blog" href="./pages/blog.html" target="_blank" rel="noopener noreferrer">Blog</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zaid-bin-shams</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script src="https://kit.fontawesome.com/20804babda.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <div class="top">
+            <button>Work with Me</button>
+            <button>My Resume</button>
+        </div>
+    </header>
+    <nav class="navbar left">
+        <div class="me">
+            <img src="./images/zaid-one.jpg" alt="zaid-bin-shams">
+            <h2>Zaid Bin Shams</h2>
+        </div>
+        <div class="sections">
+            <span>About Me</span>
+            <span>Projects</span>
+            <span>Experience</span>
+            <span>Education</span>
+            <span>Contact</span>
+            <span>My Blog</span>
+        </div>
+        <div class="socials">
+            <i class="github fa-brands fa-github"></i>
+            <i class="mail fa-solid fa-envelope"></i>
+            <i class="linkedin fa-brands fa-linkedin-in"></i>
+            <i class="instagram fa-brands fa-instagram"></i>
+            <i class="twitter fa-brands fa-twitter"></i>
+        </div>
+    </nav>
+    <div class="main-box right">
+        <div id="about">
+            <span class="main-text">Hey, I'm Zaid!</span><br>
+            <span class="sub-text">I am a <strong>20</strong> year old <strong>web-developer</strong> with a keen interest in <strong>technology</strong>, <strong>photography</strong>, and <strong>world politics</strong>. I also <strong>write content</strong> on the side.</span><br>
+            <div class="skill-section">
+                <!-- <span class="sub-text">Things I know: </span> -->
+                <span class="skills"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                <span class="skills"><i class="devicon-html5-plain"></i> HTML</span>
+                <span class="skills"><i class="devicon-css3-plain"></i> CSS</span>
+                <span class="skills"><i class="devicon-python-plain"></i> Python</span>
+                <span class="skills"><i class="devicon-java-plain"></i> Java</span>
+                <span class="skills"><i class="devicon-c-plain"></i> C</span>
+                <span class="skills"><i class="devicon-cplusplus-plain"></i> C++</span>
+            </div>
+        </div>
+        <h1 class="section-desc">Stuff I've made</h1>
+        <div id="projects">
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores enim earum officiis, consequuntur consequatur deleniti. Voluptate, placeat necessitatibus quasi saepe velit dicta perspiciatis amet animi.</div>
+                <div class="stack-box">
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                </div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores enim earum officiis, consequuntur consequatur deleniti. Voluptate, placeat necessitatibus quasi saepe velit dicta perspiciatis amet animi.</div>
+                <div class="stack-box">
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                </div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores enim earum officiis, consequuntur consequatur deleniti. Voluptate, placeat necessitatibus quasi saepe velit dicta perspiciatis amet animi.</div>
+                <div class="stack-box">
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                </div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores enim earum officiis, consequuntur consequatur deleniti. Voluptate, placeat necessitatibus quasi saepe velit dicta perspiciatis amet animi.</div>
+                <div class="stack-box">
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
                 </div>
             </div>
         </div>
-        
-        <div class="work">
-            <div class="title">My Work</div>
-            <div class="content">
-                <div class="work-unit">
-                    <div class="work-title">SamInsider</div>
-                    <div class="timeline">
-                        <div class="work-date-roll">Oct 2024 - Present: Journalist/Content Writer</div>
-                    </div>
-                    <div class="work-lore">I cover news related to Samsung gadgets.</div>
-                    <div class="work-link"><a href="https://www.saminsider.com/author/zaidbinshams/" target="_blank" rel="noopener noreferrer">Check it out!</a></div>
+        <h1 class="section-desc">Work I've done</h1>
+        <div id="experience">
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="duration">Lorem, ipsum dolor.</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores enim earum officiis, consequuntur consequatur deleniti. Voluptate, placeat necessitatibus quasi saepe velit dicta perspiciatis amet animi.</div>
+                <div class="stack-box">
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
                 </div>
-                <div class="work-unit">
-                    <div class="work-title">Entrepreneurship Club VIT-AP</div>
-                    <div class="timeline">
-                        <div class="work-date-roll">Sep 2024 - Present: Marketing Co-Lead</div>
-                        <div class="work-date-roll">Aug 2024 - Sep 2024: Marketing Associate</div>
-                    </div>
-                    <div class="work-lore">I handle the content that goes on the club's socials. I also manage the marketing of events conducted by the club.</div>
-                    <div class="work-link"><a href="#" target="_blank" rel="noopener noreferrer">Check it out!</a></div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="duration">Lorem, ipsum dolor.</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores enim earum officiis, consequuntur consequatur deleniti. Voluptate, placeat necessitatibus quasi saepe velit dicta perspiciatis amet animi.</div>
+                <div class="stack-box">
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
                 </div>
-                <div class="work-unit">
-                    <div class="work-title">DealNTech</div>
-                    <div class="timeline">
-                        <div class="work-date-roll">Sep 2022 - Present: Journalist/Content Writer</div>
-                    </div>
-                    <div class="work-lore">I cover news in the smartphone and computer hardware industry. I also write how-to guides.</div>
-                    <div class="work-link"><a href="https://www.dealntech.com/author/zaid/" target="_blank" rel="noopener noreferrer">Check it out!</a></div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="duration">Lorem, ipsum dolor.</div>
+                <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores enim earum officiis, consequuntur consequatur deleniti. Voluptate, placeat necessitatibus quasi saepe velit dicta perspiciatis amet animi.</div>
+                <div class="stack-box">
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
+                    <span class="stack">Lorem, ipsum.</span>
                 </div>
             </div>
         </div>
-
-        <div class="projects">
-            <div class="title">My Projects</div>
-            <div class="content">
-                <div class="temp">Coming soon!</div>
-                <div class="project-unit">
-                    <div class="project-title-link"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
-                    <div class="project-stack"></div>
-                    <div class="project-lore"></div>
-                </div>
+        <!-- add a PS here -->
+        <h1 class="section-desc">Where I learnt what I've learnt</h1>
+        <div id="education">
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="duration">Lorem, ipsum dolor.</div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="duration">Lorem, ipsum dolor.</div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="duration">Lorem, ipsum dolor.</div>
+            </div>
+            <div class="unit">
+                <h3 class="title">Lorem, ipsum dolor.</h3>
+                <div class="duration">Lorem, ipsum dolor.</div>
             </div>
         </div>
-
-        <div class="social">
-            <div class="title">Say hi!</div>
-            <div class="content">
-                <a class="button linkedin" href="https://www.linkedin.com/in/zaid-bin-shams/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a class="button mail" href="mailto:zaidbinshams@gmail.com" target="_blank" rel="noopener noreferrer">Mail</a>
-                <a class="button instagram" href="https://www.instagram.com/zaid.bin.shams/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a class="button twitter" href="#" target="_blank" rel="noopener noreferrer">Twiiter/X</a>
-            </div>
-        </div>
-
-    </body>
+        <!-- <h1 class="section-desc">Say hi!</h1>
+        <div id="contact">
+            
+        </div> -->
+    </div>
+</body>
 </html>

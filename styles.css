@@ -1,202 +1,202 @@
-/* GENERAL */
-
-html {
-    box-sizing: border-box;
-    background-color: rgb(0, 13, 19);
-    color: white;
-    /*font will be changed if required*/
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-a.button {
-    /* flex: 1; */
-    background-color: rgb(0, 13, 19);
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    border: 2px solid white;
-    border-radius: 6px;
-    padding: 12px 24px;
-    /*have to figure out how to add a link to a button*/
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-}
-
-.title {
-    font-size: 32px;
-    font-weight: 900;
-    text-align: center;
-    text-decoration: dotted underline;
-}
-
-.content {
-    display: flex;
-    align-items: stretch;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-/* ABOUT */
-
-.about {
-    /* background-color: blue; */
-    display: flex;
-    gap: 32px;
-    padding: 32px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-p {
-    margin: 0;
+/* CSS reset */
+* {
     padding: 0;
+    margin: 0;
 }
 
-img {
-    border: 2px solid white;
-    width: 200px;
-    border-radius: 100px;
+:root {
+    --grey: #DAD7CD;
+    --lightgrey: #EFEFEF;
+    --darkgrey: #404040;
+    --darkgreen: #3A5A40;
+    --pastelgreen: #A3B18A;
+    --lightgreen: #588157;
+    --font: "Rubik", sans-serif;
 }
 
-.about-text {
+button {
+    cursor: pointer;
+    font-family: var(--font);
+}
+
+body {
+    background-color: var(--lightgrey);
+    display: grid;
+    grid-template-columns: 1fr 5.1fr;
+}
+
+header {
+    grid-column: 2/3;
+    background-color: var(--darkgreen);
+    padding: 1.2rem;
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 400px;
-}
-
-.about .name {
-    font-size: 48px;
-    font-weight: 900;
-}
-
-.about .bio {
-    font-size: 16px;
-    /* font-weight: 900; */
-    color: lightgray;
-}
-
-.about-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    /*for now, the below padding makes the buttons off center after wrapping*/
-    padding: 6px 18px 0px 0px;
-}
-
-.button.blog,
-.button.github {
-    flex: 1;
-    background-color: white;
-    color: black;
-}
-
-/* WORK */
-
-.work {
-    /* background-color: green; */
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-    gap: 24px;
-}
-
-/* .work .title {} */
-
-/* .work .content {} */
-
-.work-unit {
-    flex: 1 1 225px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px;
-    border: 2px solid white;
-    border-radius: 6px;
-}
-
-.work-title {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* .work-timeline {} */
-
-.work-date-roll {
-    font-size: 16px;
-    font-weight: 900;
-    color: lightgray;
-}
-
-.work-lore {
-    font-size: 16px;
-    color: lightgray;
-}
-
-.work-link {
-    font-size: 16px;
-    margin-top: auto;
-    text-decoration: underline;
-}
-
-.work-link a{
-    text-decoration: none;
-    color: white;
-}
-
-/* PROJECTS */
-
-.projects {
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-    gap: 24px;
-}
-
-.projects .content {
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
+    position: sticky;
+    top: 0;
 }
 
-.projects .temp {
-    font-weight: 900;
-    color: lightgray;
+header button {
+    background-color: var(--grey);
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
 }
 
-/* .project-unit {} */
+header button:hover {
+    background-color: var(--pastelgreen);
+}
 
-/* .project-title-link {} */
+nav {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-column-start: 0;
+    background-color: var(--grey);
+    height: 100vh;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
 
-/* .project-stack {} */
-
-/* .project-lore {} */
-
-/* SOCIAL */
-
-.social {
-    /* background-color: orange; */
+nav div.me {
+    grid-row: 1/2;
     display: flex;
     flex-direction: column;
-    padding: 12px;
-    gap: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2.5rem;
+    gap: 1.5rem;
 }
 
-/* .social .title {} */
+nav div.sections {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
 
-/* .social .content {} */
+nav div.socials {
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5rem;
+}
 
-.button.linkedin,
-.button.mail,
-.button.instagram,
-.button.twitter {
-    /*this seems to work decently*/
-    flex: 1 1 150px;
+nav img {
+    max-height: 11.5rem;
+    max-width: 11.5rem;
+    border: 4px dashed var(--darkgreen);
+    border-radius: 50%;
+}
+
+nav h2 {
+    font-size: 1.8rem;
+    font-family: var(--font);
+    color: var(--darkgrey);
+    text-align: center;
+}
+
+nav div.sections span {
+    font-size: 1.5rem;
+    font-family: var(--font);
+    color: var(--darkgrey);
+    cursor: pointer;
+}
+
+nav div.socials {
+    display: flex;
+    font-size: 2rem;
+    color: var(--darkgrey);
+    gap: 1rem;
+}
+
+nav div.socials i {
+    cursor: pointer;
+}
+
+div.main-box h1 {
+    font-family: var(--font);
+    color: var(--darkgrey);
+    text-align: center;
+    font-size: 3rem;
+}
+
+#about {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .main-text {
+    text-align: center;
+    font-size: 8rem;
+    font-family: var(--font);
+}
+
+#about .sub-text {
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font);
+    font-weight: 300;
+    color: var(--darkgrey);
+    max-width: 70%;
+}
+
+#about .skill-section {
+    padding-top: 2rem;
+    display: flex;
+    gap: 0.6rem;
+}
+
+#about .skills {
+    font-size: 1.2rem;
+    font-family: var(--font);
+    color: var(--darkgrey);
+    border: 1px solid var(--darkgrey);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#about .skills i.devicon-javascript-plain, 
+#about .skills i.devicon-html5-plain,
+#about .skills i.devicon-css3-plain, 
+#about .skills i.devicon-python-plain, 
+#about .skills i.devicon-java-plain,
+#about .skills i.devicon-c-plain, 
+#about .skills i.devicon-cplusplus-plain {
+    font-size: 1.09rem;
+}
+
+#about .skills:hover {
+    background-color: var(--lightgreen);
+    color: var(--lightgrey);
+}
+
+#projects, #experience, #education {
+    display: flex;
+    padding: 0 6rem;
+    gap: 1rem;
+}
+
+.unit {
+    margin: 2rem 0rem 4rem 0rem;
+    border: 2px solid var(--darkgrey);
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--pastelgreen);
+    color: var(--darkgrey);
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#projects .desc {
+    /* text-align: justify; */
 }
