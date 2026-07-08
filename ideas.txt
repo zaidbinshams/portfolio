@@ -1,3 +1,4 @@
+copy of the readme file:
 # portfolio
 
 # December 29th, 2024
@@ -26,3 +27,8 @@ stuff to work on:
 - colors can be improved
 - font-family is a mess
 - the bio is outdated
+
+new:
+
+# July 8th, 2026
+the buttons on the about me section can open into dialog boxes and show relevant skills

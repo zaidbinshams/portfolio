@@ -47,6 +47,15 @@ header button:hover {
     background-color: var(--pastelgreen);
 }
 
+a {
+    text-decoration: none;
+    color: var(--darkgrey);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 nav {
     display: grid;
     grid-template-rows: 1.5fr 1fr 1fr;
@@ -77,38 +86,34 @@ nav div.sections {
     gap: 1rem;
 }
 
-nav div.socials {
-    grid-row: 3/4;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 5rem;
-}
-
 nav img {
     max-height: 11.5rem;
     max-width: 11.5rem;
-    border: 4px dashed var(--darkgreen);
+    border: 4px solid var(--darkgreen);
     border-radius: 50%;
 }
 
 nav h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: var(--font);
     color: var(--darkgrey);
     text-align: center;
 }
 
 nav div.sections span {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: var(--font);
     color: var(--darkgrey);
     cursor: pointer;
 }
 
 nav div.socials {
+    grid-row: 3/4;
     display: flex;
-    font-size: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5rem;
+    font-size: 1.8rem;
     color: var(--darkgrey);
     gap: 1rem;
 }
@@ -178,7 +183,7 @@ div.main-box h1 {
     color: var(--lightgrey);
 }
 
-#projects, #experience, #education {
+#projects-section, #experience-section, #education-section {
     display: flex;
     padding: 0 6rem;
     gap: 1rem;
@@ -197,6 +202,6 @@ div.main-box h1 {
     gap: 0.5rem;
 }
 
-#projects .desc {
+#projects-section .desc {
     /* text-align: justify; */
 }
