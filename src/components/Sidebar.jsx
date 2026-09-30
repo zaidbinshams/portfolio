@@ -26,7 +26,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/zaidbinshams/",
+    href: "https://www.linkedin.com/in/zaid-bin-shams/",
     icon: faLinkedinIn,
   },
   {
@@ -104,15 +104,30 @@ export default function Sidebar() {
       </div>
 
       <div className="sidebar-content" id="sidebar-navigation">
-        <nav className="sidebar-nav" aria-label="Main navigation">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={closeMenu}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <div className="sidebar-navigation-area">
+          <nav className="sidebar-nav" aria-label="Main navigation">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-        <SocialLinks className="desktop-socials" />
+          <a
+            className="resume-link"
+            href="/zaidbinshams-resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            onClick={closeMenu}
+          >
+            Resume
+          </a>
+        </div>
+
+        <div className="sidebar-bottom">
+          <p className="sidebar-status">Currently sleeping</p>
+          <SocialLinks className="desktop-socials" />
+        </div>
       </div>
 
       <SocialLinks className="mobile-socials" />

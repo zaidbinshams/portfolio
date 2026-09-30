@@ -41,9 +41,17 @@
 
 .sidebar-content {
   height: calc(100% - 3rem);
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.sidebar-navigation-area {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sidebar-nav {
@@ -68,6 +76,50 @@
 .sidebar-nav a:hover {
   color: #111;
   transform: translateX(4px);
+}
+
+.resume-link {
+  display: inline-block;
+  width: fit-content;
+
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+
+  border-top: 1px solid #d9d9d9;
+
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.resume-link:hover {
+  color: #111;
+  transform: translateX(4px);
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+  top: 1.25rem;
+}
+
+.sidebar-status {
+  width: 100%;
+  margin: 0;
+
+  color: #999;
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
 }
 
 .social-links {
@@ -102,14 +154,19 @@
   display: none;
 }
 
-/* Main content offset */
+.sidebar-nav a:focus-visible,
+.resume-link:focus-visible,
+.social-links a:focus-visible,
+.menu-toggle:focus-visible,
+.sidebar-name:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 4px;
+}
 
 main {
   margin-left: 240px;
   min-height: 100vh;
 }
-
-/* Mobile */
 
 @media (max-width: 768px) {
   .sidebar {
@@ -121,6 +178,8 @@ main {
 
     border-right: none;
     border-bottom: 1px solid #d9d9d9;
+
+    transition: height 0.3s ease;
   }
 
   .sidebar.menu-open {
@@ -143,15 +202,36 @@ main {
   }
 
   .sidebar-content {
-    display: none;
+    height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+
+    overflow: hidden;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
   }
 
   .sidebar.menu-open .sidebar-content {
     height: calc(100vh - 5rem);
 
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .sidebar-navigation-area {
     align-items: center;
-    justify-content: center;
   }
 
   .sidebar-nav {
@@ -162,6 +242,68 @@ main {
 
   .sidebar-nav a {
     font-size: 1.25rem;
+
+    opacity: 0;
+    transform: translateY(8px);
+
+    transition:
+      color 0.2s ease,
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .sidebar.menu-open .sidebar-nav a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .sidebar.menu-open .sidebar-nav a:nth-child(1) {
+    transition-delay: 0.04s;
+  }
+
+  .sidebar.menu-open .sidebar-nav a:nth-child(2) {
+    transition-delay: 0.08s;
+  }
+
+  .sidebar.menu-open .sidebar-nav a:nth-child(3) {
+    transition-delay: 0.12s;
+  }
+
+  .sidebar.menu-open .sidebar-nav a:nth-child(4) {
+    transition-delay: 0.16s;
+  }
+
+  .sidebar.menu-open .sidebar-nav a:nth-child(5) {
+    transition-delay: 0.2s;
+  }
+
+  .sidebar.menu-open .sidebar-nav a:nth-child(6) {
+    transition-delay: 0.24s;
+  }
+
+  .resume-link {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+
+    font-size: 1.1rem;
+
+    opacity: 0;
+    transform: translateY(8px);
+
+    transition:
+      color 0.2s ease,
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .sidebar.menu-open .resume-link {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.28s;
+  }
+
+  .sidebar-bottom {
+    display: none;
   }
 
   .desktop-socials {
@@ -178,6 +320,7 @@ main {
     justify-content: center;
 
     padding: 1.25rem 0;
+
     border-top: 1px solid #d9d9d9;
     background: #fff;
   }
@@ -192,10 +335,12 @@ main {
   }
 }
 
-.sidebar-nav a:focus-visible,
-.social-links a:focus-visible,
-.menu-toggle:focus-visible,
-.sidebar-name:focus-visible {
-  outline: 2px solid #555;
-  outline-offset: 4px;
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar-content,
+  .sidebar-nav a,
+  .resume-link,
+  .social-links a {
+    transition: none;
+  }
 }
