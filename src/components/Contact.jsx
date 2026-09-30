@@ -7,8 +7,6 @@ const FORM_ID = "mnpnrljj";
 export default function Contact() {
   const [state, handleSubmit, reset] = useForm(FORM_ID);
 
-  const [sent, setSent] = useState(false);
-
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -18,14 +16,11 @@ export default function Contact() {
   useEffect(() => {
     if (!state.succeeded) return;
 
-    setSent(true);
-
     const timer = setTimeout(() => {
-      setSent(false);
-      reset();
+        reset();
     }, 3000);
 
-    return () => clearTimeout(timer);
+        return () => clearTimeout(timer);
   }, [state.succeeded, reset]);
 
   const handleFormSubmit = (event) => {
@@ -180,9 +175,9 @@ export default function Contact() {
           <button type="submit" disabled={state.submitting}>
             {state.submitting
               ? "Sending..."
-              : sent
-                ? "Sent!"
-                : "Send"}
+              : state.succeeded
+              ? "Sent!"
+              : "Send"}
           </button>
         </form>
       </div>
