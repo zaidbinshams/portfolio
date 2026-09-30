@@ -2,6 +2,7 @@ import Sidebar from "./components/Sidebar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Work from "./components/Work";
+import Education from "./components/Education";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <About />
         <Projects />
         <Work />
+        <Education />
       </main>
     </>
   );
