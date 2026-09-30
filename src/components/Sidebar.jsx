@@ -95,8 +95,8 @@ function Sidebar() {
               Education
             </a>
 
-            <a href="#exploring" onClick={closeMenu}>
-              Exploring
+            <a href="#skills" onClick={closeMenu}>
+              Skills
             </a>
 
             <a href="#contact" onClick={closeMenu}>

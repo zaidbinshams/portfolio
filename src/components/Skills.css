@@ -1,0 +1,149 @@
+.skills {
+  padding: 8rem 7rem;
+  box-sizing: border-box;
+}
+
+.skills-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skills h2 {
+  margin: 0;
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.skills-subtitle {
+  margin: 1.5rem 0 0;
+  color: #888;
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Scattered layout */
+
+.skills-scatter {
+  position: relative;
+  height: 500px;
+  margin-top: 3.5rem;
+}
+
+.skill {
+  position: absolute;
+  white-space: nowrap;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.skill.known {
+  color: #444;
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+.skill.exploring {
+  color: #888;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.skill:hover {
+  color: #111;
+  transform: scale(1.06);
+}
+
+/* Known */
+
+.skill-1  { left: 7%;  top: 4%;  }
+.skill-2  { left: 29%; top: 20%; }
+.skill-3  { left: 82%; top: 7%;  }
+.skill-4  { left: 13%; top: 36%; }
+.skill-5  { left: 43%; top: 37%; }
+.skill-6  { left: 88%; top: 27%; }
+.skill-7  { left: 73%; top: 55%; }
+.skill-8  { left: 5%;  top: 61%; }
+.skill-9  { left: 34%; top: 68%; }
+.skill-10 { left: 83%; top: 67%; }
+.skill-11 { left: 16%; top: 84%; }
+.skill-12 { left: 53%; top: 84%; }
+.skill-13 { left: 70%; top: 77%; }
+.skill-14 { left: 76%; top: 91%; }
+
+/* Exploring */
+
+.skill-15 { left: 52%; top: 14%; }
+.skill-16 { left: 69%; top: 39%; }
+.skill-17 { left: 89%; top: 47%; }
+.skill-18 { left: 19%; top: 55%; }
+.skill-19 { left: 47%; top: 58%; }
+.skill-20 { left: 57%; top: 45%; }
+.skill-21 { left: 64%; top: 69%; }
+
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 6rem 2rem;
+  }
+
+  .skills-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .skills-scatter {
+    height: 620px;
+    margin-top: 3rem;
+  }
+
+  .skill.known {
+    font-size: 1.2rem;
+  }
+
+  .skill.exploring {
+    font-size: 0.95rem;
+  }
+
+  .skill-1  { left: 2%;  top: 2%;  }
+  .skill-2  { left: 48%; top: 8%;  }
+  .skill-3  { left: 70%; top: 1%;  }
+  .skill-4  { left: 12%; top: 16%; }
+  .skill-5  { left: 48%; top: 22%; }
+  .skill-6  { left: 73%; top: 25%; }
+  .skill-7  { left: 39%; top: 34%; }
+  .skill-8  { left: 2%;  top: 37%; }
+  .skill-9  { left: 46%; top: 46%; }
+  .skill-10 { left: 71%; top: 45%; }
+  .skill-11 { left: 8%;  top: 56%; }
+  .skill-12 { left: 51%; top: 60%; }
+  .skill-13 { left: 72%; top: 68%; }
+  .skill-14 { left: 3%; top: 74%; }
+
+  .skill-15 { left: 30%; top: 13%; }
+  .skill-16 { left: 65%; top: 16%; }
+  .skill-17 { left: 77%; top: 37%; }
+  .skill-18 { left: 25%; top: 42%; }
+  .skill-19 { left: 20%; top: 63%; }
+  .skill-20 { left: 61%; top: 53%; }
+  .skill-21 { left: 68%; top: 79%; }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 5rem 1.5rem;
+  }
+
+  .skills-scatter {
+    height: 700px;
+  }
+
+  .skill.known {
+    font-size: 1.05rem;
+  }
+
+  .skill.exploring {
+    font-size: 0.85rem;
+  }
+}

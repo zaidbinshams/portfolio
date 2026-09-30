@@ -1,18 +1,27 @@
 import "./Contact.css";
 
-function Contact() {
+export default function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <section className="contact" id="contact">
+    <section id="contact" className="contact">
       <div className="contact-content">
         <h2>Say Hi!</h2>
 
-        <form className="contact-form">
+        <p className="contact-intro">
+          Have something to say, build, discuss, or just want to say hello?
+          Drop me a message.
+        </p>
+
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="contact-field">
             <label htmlFor="name">Name</label>
             <input
-              type="text"
               id="name"
               name="name"
+              type="text"
               placeholder="Your name"
             />
           </div>
@@ -20,9 +29,9 @@ function Contact() {
           <div className="contact-field">
             <label htmlFor="email">Email</label>
             <input
-              type="email"
               id="email"
               name="email"
+              type="email"
               placeholder="you@example.com"
             />
           </div>
@@ -32,8 +41,8 @@ function Contact() {
             <textarea
               id="message"
               name="message"
-              rows="6"
               placeholder="What's on your mind?"
+              rows="5"
             />
           </div>
 
@@ -43,5 +52,3 @@ function Contact() {
     </section>
   );
 }
-
-export default Contact;

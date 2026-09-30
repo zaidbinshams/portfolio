@@ -42,6 +42,17 @@ const projects = [
 ];
 
 function Projects() {
+  const openGitHub = (project) => {
+    window.open(project.github, "_blank", "noopener,noreferrer");
+  };
+
+  const handleCardKeyDown = (event, project) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openGitHub(project);
+    }
+  };
+
   return (
     <section className="projects" id="projects">
       <div className="projects-content">
@@ -49,11 +60,24 @@ function Projects() {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.title}>
+            <article
+              className="project-card"
+              key={project.title}
+              role="link"
+              tabIndex={0}
+              aria-label={`Open ${project.title} on GitHub`}
+              onClick={() => openGitHub(project)}
+              onKeyDown={(event) =>
+                handleCardKeyDown(event, project)
+              }
+            >
               <div className="project-card-top">
                 <h3>{project.title}</h3>
 
-                <div className="project-links">
+                <div
+                  className="project-links"
+                  onClick={(event) => event.stopPropagation()}
+                >
                   <a
                     href={project.github}
                     target="_blank"
@@ -69,6 +93,7 @@ function Projects() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`${project.title} live demo`}
+                      onClick={(event) => event.stopPropagation()}
                     >
                       Live
                     </a>

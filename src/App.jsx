@@ -3,7 +3,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Work from "./components/Work";
 import Education from "./components/Education";
-import Exploring from "./components/Exploring";
+import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Projects />
         <Work />
         <Education />
-        <Exploring />
+        <Skills />
         <Contact />
       </main>
     </>

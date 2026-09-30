@@ -37,6 +37,8 @@
   flex-direction: column;
   gap: 1.1rem;
 
+  cursor: pointer;
+
   transition:
     transform 0.2s ease,
     border-color 0.2s ease;
@@ -45,6 +47,11 @@
 .project-card:hover {
   transform: translateY(-4px);
   border-color: #999999;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid #555555;
+  outline-offset: 3px;
 }
 
 .project-card-top {
@@ -94,6 +101,11 @@
 }
 
 .project-links a {
+  display: inline-block;
+
+  padding: 0.4rem 0.4rem;
+  margin: -0.4rem -0.4rem;
+
   color: #555555;
   text-decoration: none;
   font-size: 0.9rem;

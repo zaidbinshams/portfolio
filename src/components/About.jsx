@@ -7,9 +7,13 @@ function About() {
         <h1>Hey, I'm Zaid!</h1>
 
         <p>
-          I'm a computer science student who likes building things with
-          technology. I'm particularly interested in AI and software, but I'm
-          also into photography, writing, and keeping up with world politics.
+          I'm a <strong>computer science student</strong> who spends a lot of
+          time <strong>building things with technology</strong>. I'm
+          particularly interested in <strong>AI</strong> and{" "}
+          <strong>software</strong>, but that's not all I do — I also{" "}
+          <strong>write</strong>, take an interest in{" "}
+          <strong>photography</strong>, and spend probably more time than I
+          should following <strong>world politics</strong>.
         </p>
       </div>
     </section>

@@ -32,9 +32,14 @@
 
   color: #555555;
 
-  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.55;
+}
+
+.about strong {
+  color: #111111;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -54,7 +59,7 @@
   .about p {
     margin-top: 1.75rem;
 
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.6;
   }
 }
