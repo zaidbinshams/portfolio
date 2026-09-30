@@ -1,5 +1,6 @@
 import Sidebar from "./components/Sidebar";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
 
       <main className="main-content">
         <About />
+        <Projects />
       </main>
     </>
   );

@@ -1,0 +1,148 @@
+.projects {
+  min-height: 100vh;
+  padding: 8rem 7rem;
+  box-sizing: border-box;
+}
+
+.projects-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects h2 {
+  margin: 0 0 4rem;
+
+  color: #111111;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+
+  background-color: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #999999;
+}
+
+.project-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-card h3 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.project-description {
+  max-width: 600px;
+
+  color: #666666;
+
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.project-highlight {
+  max-width: 600px;
+
+  padding-left: 0.8rem;
+
+  border-left: 2px solid #c7c7c7;
+
+  color: #444444;
+
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.project-links a {
+  color: #555555;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: #111111;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin-top: auto;
+}
+
+.project-technologies span {
+  padding: 0.4rem 0.7rem;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 999px;
+
+  color: #555555;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 6rem 1.5rem;
+  }
+
+  .projects h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-top {
+    flex-direction: column;
+  }
+
+  .project-links {
+    order: -1;
+  }
+}
