@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -64,38 +64,58 @@ export default function Sidebar() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  useEffect(() => {
+    if (!menuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [menuOpen]);
+
   return (
-    <>
-      <aside className={`sidebar ${menuOpen ? "menu-open" : ""}`}>
-        <div className="sidebar-header">
-          <a href="#top" className="sidebar-name" onClick={closeMenu}>
-            Zaid Bin Shams
-          </a>
+    <aside className={`sidebar ${menuOpen ? "menu-open" : ""}`}>
+      <div className="sidebar-header">
+        <a href="#top" className="sidebar-name" onClick={closeMenu}>
+          Zaid Bin Shams
+        </a>
 
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-          >
-            {menuOpen ? <X size={25} /> : <Menu size={25} />}
-          </button>
-        </div>
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="sidebar-navigation"
+        >
+          {menuOpen ? <X size={25} /> : <Menu size={25} />}
+        </button>
+      </div>
 
-        <div className="sidebar-content">
-          <nav className="sidebar-nav">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} onClick={closeMenu}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
+      <div className="sidebar-content" id="sidebar-navigation">
+        <nav className="sidebar-nav" aria-label="Main navigation">
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href} onClick={closeMenu}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
 
-          <SocialLinks className="desktop-socials" />
-        </div>
+        <SocialLinks className="desktop-socials" />
+      </div>
 
-        <SocialLinks className="mobile-socials" />
-      </aside>
-    </>
+      <SocialLinks className="mobile-socials" />
+    </aside>
   );
 }

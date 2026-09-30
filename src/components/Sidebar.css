@@ -77,6 +77,13 @@
 }
 
 .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
   color: #666;
   font-size: 1rem;
   text-decoration: none;
@@ -183,4 +190,12 @@ main {
     margin-left: 0;
     padding-bottom: 4rem;
   }
+}
+
+.sidebar-nav a:focus-visible,
+.social-links a:focus-visible,
+.menu-toggle:focus-visible,
+.sidebar-name:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 4px;
 }

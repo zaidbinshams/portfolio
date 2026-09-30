@@ -119,3 +119,10 @@
     max-width: none;
   }
 }
+
+.contact button:focus-visible,
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 3px;
+}
