@@ -1,4 +1,5 @@
 import Sidebar from "./components/Sidebar";
+import About from "./components/About";
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       <Sidebar />
 
       <main className="main-content">
-        <div id="top" />
+        <About />
       </main>
     </>
   );
