@@ -16,3 +16,15 @@ body {
   color: #111111;
   font-family: "Rubik", sans-serif;
 }
+
+.main-content {
+  margin-left: 240px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding-bottom: 4rem;
+  }
+}

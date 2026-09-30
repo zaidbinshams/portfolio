@@ -5,7 +5,7 @@ function App() {
     <>
       <Sidebar />
 
-      <main style={{ marginLeft: "240px", minHeight: "100vh" }}>
+      <main className="main-content">
         <div id="top" />
       </main>
     </>
