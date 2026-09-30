@@ -1,0 +1,49 @@
+.exploring {
+  padding: 8rem 7rem;
+  box-sizing: border-box;
+}
+
+.exploring-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.exploring h2 {
+  margin: 0 0 4rem;
+
+  color: #111111;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.exploring-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.exploring-list span {
+  padding: 0.55rem 0.9rem;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 999px;
+
+  color: #555555;
+
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .exploring {
+    padding: 6rem 1.5rem;
+  }
+
+  .exploring h2 {
+    margin-bottom: 2.5rem;
+  }
+}
