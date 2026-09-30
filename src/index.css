@@ -1,9 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  color-scheme: dark;
+
+  --page: #101010;
+  --surface: #191919;
+  --surface-hover: #242424;
+
+  --text: #f2f2f2;
+  --muted: #a0a0a0;
+  --subtle: #777777;
+
+  --border: #303030;
+  --border-strong: #484848;
+
+  --accent: #f2f2f2;
+  --accent-text: #101010;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --page: #ffffff;
+  --surface: #f7f7f7;
+  --surface-hover: #eeeeee;
+
+  --text: #111111;
+  --muted: #666666;
+  --subtle: #888888;
+
+  --border: #d9d9d9;
+  --border-strong: #bdbdbd;
+
+  --accent: #111111;
+  --accent-text: #ffffff;
+}
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -13,10 +47,14 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background-color: #ffffff;
-  color: #111111;
+  background: var(--page);
+  color: var(--text);
   font-family: "Rubik", sans-serif;
   overflow-x: hidden;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 button,
@@ -25,16 +63,8 @@ textarea {
   font-family: inherit;
 }
 
-.main-content {
-  margin-left: 240px;
-  min-height: 100vh;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    margin-left: 0;
-    padding-bottom: 4rem;
-  }
+button {
+  color: inherit;
 }
 
 .reveal {
@@ -50,6 +80,10 @@ textarea {
   transform: translateY(0);
 }
 
+section {
+  scroll-margin-top: 0.2rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -58,6 +92,10 @@ textarea {
   .reveal {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  body {
     transition: none;
   }
 }

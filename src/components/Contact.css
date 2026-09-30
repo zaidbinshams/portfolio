@@ -11,6 +11,7 @@
 
 .contact h2 {
   margin: 0;
+  color: var(--text);
   font-size: clamp(3.5rem, 6vw, 5.5rem);
   font-weight: 400;
   line-height: 0.95;
@@ -20,7 +21,7 @@
 .contact-intro {
   max-width: 600px;
   margin: 1.5rem 0 2.5rem;
-  color: #666666;
+  color: var(--muted);
   font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -39,7 +40,7 @@
 
 .contact-field label {
   margin-bottom: 0.4rem;
-  color: #444444;
+  color: var(--text);
   font-size: 0.85rem;
   font-weight: 400;
 }
@@ -50,13 +51,13 @@
   padding: 0.55rem 0;
 
   border: none;
-  border-bottom: 1px solid #bdbdbd;
+  border-bottom: 1px solid var(--border-strong);
 
   outline: none;
   box-shadow: none;
 
   background: transparent;
-  color: #111111;
+  color: var(--text);
 
   font-family: inherit;
   font-size: 1rem;
@@ -71,7 +72,7 @@
 .contact-field textarea:focus {
   outline: none;
   box-shadow: none;
-  border-bottom-color: #111111;
+  border-bottom-color: var(--text);
 }
 
 .contact-field input:focus-visible,
@@ -88,18 +89,19 @@
 
 .contact-field input::placeholder,
 .contact-field textarea::placeholder {
-  color: #aaaaaa;
+  color: var(--subtle);
 }
 
 .contact-validation-error,
 .contact-field > div {
   margin-top: 0.35rem;
-  color: #777777;
+  color: var(--muted);
   font-size: 0.8rem;
   font-weight: 300;
 }
 
 .contact-form > div[role="alert"] {
+  color: var(--muted);
   margin-top: -0.5rem;
   margin-bottom: 1rem;
 }
@@ -111,8 +113,8 @@
   border: none;
   border-radius: 999px;
 
-  background: #111111;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--accent-text);
 
   font-family: inherit;
   font-size: 0.9rem;
@@ -127,7 +129,7 @@
 
 .contact button:hover:not(:disabled) {
   transform: translateY(-2px);
-  background: #333333;
+  background: var(--surface-hover);
 }
 
 .contact button:focus-visible {

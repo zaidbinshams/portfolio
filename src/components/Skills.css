@@ -40,19 +40,19 @@
 }
 
 .skill.known {
-  color: #444;
+  color: var(--text);
   font-size: 1.45rem;
   font-weight: 400;
 }
 
 .skill.exploring {
-  color: #888;
+  color: var(--muted);
   font-size: 1.05rem;
   font-weight: 300;
 }
 
 .skill:hover {
-  color: #111;
+  color: var(--text);
   transform: scale(1.06);
 }
 

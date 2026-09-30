@@ -11,7 +11,7 @@
 
 .projects h2 {
   margin: 0 0 4rem;
-  color: #111111;
+  color: var(--text);
   font-size: clamp(3.5rem, 6vw, 5.5rem);
   font-weight: 400;
   line-height: 0.95;
@@ -27,8 +27,8 @@
 .project-card {
   padding: 1.5rem;
 
-  background-color: #f7f7f7;
-  border: 1px solid #d9d9d9;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
 
   display: flex;
@@ -44,11 +44,12 @@
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: #999999;
+  border-color: var(--border-strong);
+  background-color: var(--surface-hover);
 }
 
 .project-card:focus-visible {
-  outline: 2px solid #555555;
+  outline: 2px solid var(--border-strong);
   outline-offset: 3px;
 }
 
@@ -62,7 +63,7 @@
 .project-card h3 {
   margin: 0;
 
-  color: #111111;
+  color: var(--text);
 
   font-size: 1.4rem;
   font-weight: 500;
@@ -71,7 +72,7 @@
 .project-description {
   max-width: 600px;
 
-  color: #666666;
+  color: var(--muted);
 
   font-size: 1rem;
   font-weight: 300;
@@ -83,9 +84,9 @@
 
   padding-left: 0.8rem;
 
-  border-left: 2px solid #c7c7c7;
+  border-left: 2px solid var(--border-strong);
 
-  color: #444444;
+  color: var(--text);
 
   font-size: 0.92rem;
   font-weight: 400;
@@ -104,7 +105,7 @@
   padding: 0.4rem 0.4rem;
   margin: -0.4rem -0.4rem;
 
-  color: #555555;
+  color: var(--muted);
   text-decoration: none;
   font-size: 0.9rem;
 
@@ -112,7 +113,7 @@
 }
 
 .project-links a:hover {
-  color: #111111;
+  color: var(--text);
 }
 
 .project-technologies {
@@ -126,10 +127,10 @@
 .project-technologies span {
   padding: 0.4rem 0.7rem;
 
-  border: 1px solid #cfcfcf;
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
 
-  color: #555555;
+  color: var(--muted);
   font-size: 0.8rem;
   font-weight: 400;
 }

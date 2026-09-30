@@ -11,7 +11,7 @@
 
 .work h2 {
   margin: 0 0 4rem;
-  color: #111111;
+  color: var(--text);
   font-size: clamp(3.5rem, 6vw, 5.5rem);
   font-weight: 400;
   line-height: 0.95;
@@ -25,7 +25,7 @@
 .work-label {
   margin-bottom: 1.5rem;
 
-  color: #888888;
+  color: var(--subtle);
 
   font-size: 0.8rem;
   font-weight: 500;
@@ -34,7 +34,7 @@
 }
 
 .work-list {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--border);
 }
 
 .work-entry {
@@ -48,7 +48,7 @@
 }
 
 .work-entry + .work-entry {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--border);
 }
 
 .work-entry-main {
@@ -58,7 +58,7 @@
 .work-entry h3 {
   margin: 0;
 
-  color: #111111;
+  color: var(--text);
 
   font-size: 1.35rem;
   font-weight: 500;
@@ -68,7 +68,7 @@
 .work-organisation {
   margin-top: 0.35rem;
 
-  color: #666666;
+  color: var(--muted);
 
   font-size: 1rem;
   font-weight: 300;
@@ -77,7 +77,7 @@
 .work-dates {
   padding-top: 0.1rem;
 
-  color: #666666;
+  color: var(--muted);
 
   font-size: 0.9rem;
   font-weight: 300;
@@ -90,7 +90,7 @@
   max-width: 760px;
   margin-top: 1rem;
 
-  color: #555555;
+  color: var(--muted);
 
   font-size: 0.98rem;
   font-weight: 300;

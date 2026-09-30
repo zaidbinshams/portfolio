@@ -18,7 +18,7 @@
 .about h1 {
   margin: 0;
 
-  color: #111111;
+  color: var(--text);
 
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 400;
@@ -30,7 +30,7 @@
   max-width: 850px;
   margin-top: 2.5rem;
 
-  color: #555555;
+  color: var(--muted);
 
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-weight: 300;
@@ -38,7 +38,7 @@
 }
 
 .about strong {
-  color: #111111;
+  color: var(--text);
   font-weight: 400;
 }
 

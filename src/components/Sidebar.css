@@ -10,10 +10,14 @@
 
   padding: 2.5rem 2rem;
 
-  border-right: 1px solid #d9d9d9;
-  background: #fff;
+  border-right: 1px solid var(--border);
+  background: var(--page);
 
   font-family: "Rubik", sans-serif;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .sidebar-header {
@@ -23,11 +27,17 @@
 }
 
 .sidebar-name {
-  color: #111;
+  color: var(--text);
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: -0.02em;
+}
+
+.mobile-header-actions {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .menu-toggle {
@@ -35,7 +45,7 @@
   padding: 0;
   border: none;
   background: transparent;
-  color: #111;
+  color: var(--text);
   cursor: pointer;
 }
 
@@ -58,12 +68,11 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  margin-top: 4.5rem;
 }
 
 .sidebar-nav a {
   width: fit-content;
-  color: #555;
+  color: var(--muted);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
@@ -74,7 +83,7 @@
 }
 
 .sidebar-nav a:hover {
-  color: #111;
+  color: var(--text);
   transform: translateX(4px);
 }
 
@@ -85,9 +94,9 @@
   margin-top: 2rem;
   padding-top: 1.25rem;
 
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--border);
 
-  color: #555;
+  color: var(--text);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 400;
@@ -98,24 +107,57 @@
 }
 
 .resume-link:hover {
-  color: #111;
+  color: var(--text);
   transform: translateX(4px);
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  border: none;
+  background: transparent;
+
+  color: var(--muted);
+
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+}
+
+.desktop-theme-toggle {
+  justify-content: flex-start;
+  margin-top: 1.25rem;
+  padding: 0;
+}
+
 .sidebar-bottom {
+  position: relative;
+  top: 1.25rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
-  position: relative;
-  top: 1.25rem;
 }
 
 .sidebar-status {
   width: 100%;
   margin: 0;
 
-  color: #999;
+  color: var(--subtle);
   font-size: 0.8rem;
   font-weight: 300;
   font-style: italic;
@@ -136,7 +178,7 @@
   width: 2rem;
   height: 2rem;
 
-  color: #666;
+  color: var(--muted);
   font-size: 1rem;
   text-decoration: none;
 
@@ -146,7 +188,7 @@
 }
 
 .social-links a:hover {
-  color: #111;
+  color: var(--text);
   transform: translateY(-2px);
 }
 
@@ -154,18 +196,19 @@
   display: none;
 }
 
+main {
+  margin-left: 240px;
+  min-height: 100vh;
+}
+
 .sidebar-nav a:focus-visible,
 .resume-link:focus-visible,
 .social-links a:focus-visible,
 .menu-toggle:focus-visible,
-.sidebar-name:focus-visible {
-  outline: 2px solid #555;
+.sidebar-name:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--border-strong);
   outline-offset: 4px;
-}
-
-main {
-  margin-left: 240px;
-  min-height: 100vh;
 }
 
 @media (max-width: 768px) {
@@ -177,9 +220,7 @@ main {
     padding: 1.25rem 1.5rem;
 
     border-right: none;
-    border-bottom: 1px solid #d9d9d9;
-
-    transition: height 0.3s ease;
+    border-bottom: 1px solid var(--border);
   }
 
   .sidebar.menu-open {
@@ -195,10 +236,24 @@ main {
     font-size: 1.1rem;
   }
 
+  .mobile-header-actions {
+    display: flex;
+  }
+
   .menu-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .mobile-theme-toggle {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+  }
+
+  .desktop-theme-toggle {
+    display: none;
   }
 
   .sidebar-content {
@@ -231,13 +286,14 @@ main {
   }
 
   .sidebar-navigation-area {
+    flex: none;
     align-items: center;
+    justify-content: center;
   }
 
   .sidebar-nav {
     align-items: center;
     gap: 1.75rem;
-    margin-top: 0;
   }
 
   .sidebar-nav a {
@@ -321,8 +377,8 @@ main {
 
     padding: 1.25rem 0;
 
-    border-top: 1px solid #d9d9d9;
-    background: #fff;
+    border-top: 1px solid var(--border);
+    background: var(--page);
   }
 
   .sidebar.menu-open .mobile-socials {
@@ -340,7 +396,8 @@ main {
   .sidebar-content,
   .sidebar-nav a,
   .resume-link,
-  .social-links a {
+  .social-links a,
+  .theme-toggle {
     transition: none;
   }
 }

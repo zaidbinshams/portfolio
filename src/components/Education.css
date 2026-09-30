@@ -11,7 +11,7 @@
 
 .education h2 {
   margin: 0 0 4rem;
-  color: #111111;
+  color: var(--text);
   font-size: clamp(3.5rem, 6vw, 5.5rem);
   font-weight: 400;
   line-height: 0.95;
@@ -35,7 +35,7 @@
 }
 
 .education-entry + .education-entry {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--border);
 }
 
 .education-entry-main {
@@ -45,7 +45,7 @@
 .education-entry h3 {
   margin: 0;
 
-  color: #111111;
+  color: var(--text);
 
   font-size: 1.35rem;
   font-weight: 500;
@@ -55,7 +55,7 @@
 .education-qualification {
   margin-top: 0.35rem;
 
-  color: #555555;
+  color: var(--muted);
 
   font-size: 1rem;
   font-weight: 300;
@@ -65,7 +65,7 @@
 .education-details {
   margin-top: 0.25rem;
 
-  color: #777777;
+  color: var(--subtle);
 
   font-size: 0.9rem;
   font-weight: 300;
@@ -74,7 +74,7 @@
 .education-dates {
   padding-top: 0.1rem;
 
-  color: #666666;
+  color: var(--subtle);
 
   font-size: 0.9rem;
   font-weight: 300;

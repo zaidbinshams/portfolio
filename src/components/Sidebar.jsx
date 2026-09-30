@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -36,7 +36,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/zaidbinshams/",
+    href: "https://www.instagram.com/zaid.bin.shams/",
     icon: faInstagram,
   },
 ];
@@ -56,6 +56,38 @@ function SocialLinks({ className = "" }) {
         </a>
       ))}
     </div>
+  );
+}
+
+function ThemeToggle({ mobile = false }) {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "dark";
+  });
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
+  };
+
+  const lightMode = theme === "light";
+
+  return (
+    <button
+      type="button"
+      className={`theme-toggle ${mobile ? "mobile-theme-toggle" : "desktop-theme-toggle"}`}
+      onClick={toggleTheme}
+      aria-label={lightMode ? "Switch to dark mode" : "Switch to light mode"}
+    >
+      {lightMode ? <Moon size={16} /> : <Sun size={16} />}
+
+      {!mobile && (
+        <span>{lightMode ? "Dark mode" : "Light mode"}</span>
+      )}
+    </button>
   );
 }
 
@@ -92,15 +124,19 @@ export default function Sidebar() {
           Zaid Bin Shams
         </a>
 
-        <button
-          className="menu-toggle"
-          onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-          aria-controls="sidebar-navigation"
-        >
-          {menuOpen ? <X size={25} /> : <Menu size={25} />}
-        </button>
+        <div className="mobile-header-actions">
+          <ThemeToggle mobile />
+
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="sidebar-navigation"
+          >
+            {menuOpen ? <X size={25} /> : <Menu size={25} />}
+          </button>
+        </div>
       </div>
 
       <div className="sidebar-content" id="sidebar-navigation">
@@ -122,6 +158,8 @@ export default function Sidebar() {
           >
             Resume
           </a>
+
+          <ThemeToggle />
         </div>
 
         <div className="sidebar-bottom">
