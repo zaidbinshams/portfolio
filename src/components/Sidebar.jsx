@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -8,45 +7,49 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
 import "./Sidebar.css";
+
+const navLinks = [
+  { label: "About", href: "#top" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
 
 const socialLinks = [
   {
     label: "GitHub",
     href: "https://github.com/zaidbinshams",
     icon: faGithub,
-    external: true,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/zaid-bin-shams/",
+    href: "https://www.linkedin.com/in/zaidbinshams/",
     icon: faLinkedinIn,
-    external: true,
   },
   {
     label: "Email",
     href: "mailto:zaidbinshams@gmail.com",
     icon: faEnvelope,
-    external: false,
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/zaid.bin.shams/",
+    href: "https://www.instagram.com/zaidbinshams/",
     icon: faInstagram,
-    external: true,
   },
 ];
 
-function SocialLinks({ className }) {
+function SocialLinks({ className = "" }) {
   return (
-    <div className={className}>
+    <div className={`social-links ${className}`}>
       {socialLinks.map((social) => (
         <a
           key={social.label}
           href={social.href}
-          target={social.external ? "_blank" : undefined}
-          rel={social.external ? "noreferrer" : undefined}
+          target={social.href.startsWith("mailto:") ? undefined : "_blank"}
+          rel={social.href.startsWith("mailto:") ? undefined : "noreferrer"}
           aria-label={social.label}
         >
           <FontAwesomeIcon icon={social.icon} />
@@ -56,12 +59,10 @@ function SocialLinks({ className }) {
   );
 }
 
-function Sidebar() {
+export default function Sidebar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
@@ -72,9 +73,9 @@ function Sidebar() {
           </a>
 
           <button
-            className="menu-button"
+            className="menu-toggle"
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
           >
             {menuOpen ? <X size={25} /> : <Menu size={25} />}
@@ -82,35 +83,19 @@ function Sidebar() {
         </div>
 
         <div className="sidebar-content">
-          <nav className="sidebar-nav" aria-label="Main navigation">
-            <a href="#projects" onClick={closeMenu}>
-              Projects
-            </a>
-
-            <a href="#experience" onClick={closeMenu}>
-              Experience
-            </a>
-
-            <a href="#education" onClick={closeMenu}>
-              Education
-            </a>
-
-            <a href="#skills" onClick={closeMenu}>
-              Skills
-            </a>
-
-            <a href="#contact" onClick={closeMenu}>
-              Contact
-            </a>
+          <nav className="sidebar-nav">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            ))}
           </nav>
 
-          <SocialLinks className="sidebar-socials" />
+          <SocialLinks className="desktop-socials" />
         </div>
-      </aside>
 
-      <SocialLinks className={`mobile-socials ${menuOpen ? "hidden" : ""}`} />
+        <SocialLinks className="mobile-socials" />
+      </aside>
     </>
   );
 }
-
-export default Sidebar;

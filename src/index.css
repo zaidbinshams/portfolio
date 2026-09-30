@@ -11,10 +11,18 @@ html {
 }
 
 body {
+  margin: 0;
   min-width: 320px;
   background-color: #ffffff;
   color: #111111;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
 }
 
 .main-content {

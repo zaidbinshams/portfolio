@@ -1,128 +1,121 @@
 .contact {
-  padding: 8rem 7rem 10rem;
+  padding: 6rem 7rem 6rem;
   box-sizing: border-box;
 }
 
 .contact-content {
   width: 100%;
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .contact h2 {
   margin: 0;
-  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
 
 .contact-intro {
-  max-width: 650px;
-  margin: 2rem 0 4rem;
-  color: #666;
-  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 1.5rem 0 2.5rem;
+  color: #666666;
+  font-size: 1.1rem;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .contact-form {
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .contact-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-field label {
-  margin-bottom: 0.6rem;
-  color: #444;
-  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #444444;
+  font-size: 0.85rem;
   font-weight: 400;
 }
 
 .contact-field input,
 .contact-field textarea {
   width: 100%;
-  padding: 0.7rem 0;
+  padding: 0.55rem 0;
   border: none;
   border-bottom: 1px solid #bdbdbd;
   outline: none;
   background: transparent;
-  color: #111;
+  color: #111111;
   font-family: inherit;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   box-sizing: border-box;
   transition: border-color 0.2s ease;
 }
 
 .contact-field textarea {
-  min-height: 140px;
+  min-height: 90px;
   resize: vertical;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .contact-field input::placeholder,
 .contact-field textarea::placeholder {
-  color: #aaa;
+  color: #aaaaaa;
 }
 
 .contact-field input:focus,
 .contact-field textarea:focus {
-  border-bottom-color: #111;
+  border-bottom-color: #111111;
 }
 
 .contact button {
-  margin-top: 0.5rem;
-  padding: 0.85rem 1.8rem;
+  margin-top: 0.25rem;
+  padding: 0.75rem 1.6rem;
   border: none;
   border-radius: 999px;
-  background: #111;
-  color: #fff;
+  background: #111111;
+  color: #ffffff;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .contact button:hover {
   transform: translateY(-2px);
-  background: #333;
+  background: #333333;
 }
 
 @media (max-width: 768px) {
   .contact {
-    padding: 6rem 2rem 8rem;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  .contact-content {
+    max-width: none;
+  }
+
+  .contact h2 {
+    font-size: clamp(3rem, 14vw, 5rem);
   }
 
   .contact-intro {
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
-    font-size: 1.05rem;
+    margin-top: 1.25rem;
+    margin-bottom: 2.25rem;
+    font-size: 1rem;
   }
 
   .contact-form {
     max-width: none;
-  }
-
-  .contact-field {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact {
-    padding: 5rem 1.5rem 7rem;
-  }
-
-  .contact h2 {
-    font-size: clamp(3.2rem, 16vw, 5rem);
-  }
-
-  .contact-intro {
-    font-size: 1rem;
   }
 }
