@@ -91,20 +91,16 @@ function Sidebar() {
               Experience
             </a>
 
-            <a href="#activities" onClick={closeMenu}>
-              Activities
-            </a>
-
             <a href="#education" onClick={closeMenu}>
               Education
             </a>
 
-            <a href="#contact" onClick={closeMenu}>
-              Contact
+            <a href="#exploring" onClick={closeMenu}>
+              Exploring
             </a>
 
-            <a href="#blog" onClick={closeMenu}>
-              Blog
+            <a href="#contact" onClick={closeMenu}>
+              Contact
             </a>
           </nav>
 
