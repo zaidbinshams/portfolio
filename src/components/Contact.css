@@ -48,16 +48,36 @@
 .contact-field textarea {
   width: 100%;
   padding: 0.55rem 0;
+
   border: none;
   border-bottom: 1px solid #bdbdbd;
+
   outline: none;
+  box-shadow: none;
+
   background: transparent;
   color: #111111;
+
   font-family: inherit;
   font-size: 1rem;
   font-weight: 300;
+
   box-sizing: border-box;
+
   transition: border-color 0.2s ease;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom-color: #111111;
+}
+
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 .contact-field textarea {
@@ -71,29 +91,53 @@
   color: #aaaaaa;
 }
 
-.contact-field input:focus,
-.contact-field textarea:focus {
-  border-bottom-color: #111111;
+.contact-validation-error,
+.contact-field > div {
+  margin-top: 0.35rem;
+  color: #777777;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.contact-form > div[role="alert"] {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
 }
 
 .contact button {
   margin-top: 0.25rem;
   padding: 0.75rem 1.6rem;
+
   border: none;
   border-radius: 999px;
+
   background: #111111;
   color: #ffffff;
+
   font-family: inherit;
   font-size: 0.9rem;
+
   cursor: pointer;
+
   transition:
     transform 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    opacity 0.2s ease;
 }
 
-.contact button:hover {
+.contact button:hover:not(:disabled) {
   transform: translateY(-2px);
   background: #333333;
+}
+
+.contact button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.contact button:disabled {
+  cursor: wait;
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
@@ -118,11 +162,4 @@
   .contact-form {
     max-width: none;
   }
-}
-
-.contact button:focus-visible,
-.contact-field input:focus-visible,
-.contact-field textarea:focus-visible {
-  outline: 2px solid #555;
-  outline-offset: 3px;
 }
