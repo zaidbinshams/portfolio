@@ -1,0 +1,114 @@
+.contact {
+  padding: 8rem 7rem;
+  box-sizing: border-box;
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  margin: 0 0 4rem;
+
+  color: #111111;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-field label {
+  color: #444444;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0.9rem 0;
+
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #111111;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+
+  transition: border-color 0.2s ease;
+}
+
+.contact-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-bottom-color: #111111;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #999999;
+}
+
+.contact-form button {
+  align-self: flex-start;
+
+  padding: 0.8rem 1.5rem;
+
+  border: 1px solid #111111;
+  border-radius: 999px;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 0.95rem;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 6rem 1.5rem;
+  }
+
+  .contact h2 {
+    margin-bottom: 2.5rem;
+  }
+}
