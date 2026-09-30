@@ -5,19 +5,37 @@ import Work from "./components/Work";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Reveal from "./components/Reveal";
 
 function App() {
   return (
     <>
       <Sidebar />
 
-      <main className="main-content">
-        <About />
-        <Projects />
-        <Work />
-        <Education />
-        <Skills />
-        <Contact />
+      <main>
+        <Reveal>
+          <About />
+        </Reveal>
+
+        <Reveal>
+          <Projects />
+        </Reveal>
+
+        <Reveal>
+          <Work />
+        </Reveal>
+
+        <Reveal>
+          <Education />
+        </Reveal>
+
+        <Reveal>
+          <Skills />
+        </Reveal>
+
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
     </>
   );
