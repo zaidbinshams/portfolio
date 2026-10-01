@@ -180,6 +180,14 @@ export default function Contact() {
               : "Send"}
           </button>
         </form>
+        <a
+          className="portfolio-source-link"
+          href="https://github.com/zaidbinshams/portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See how I built this portfolio →
+        </a>
       </div>
     </section>
   );

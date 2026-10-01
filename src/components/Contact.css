@@ -165,3 +165,22 @@
     max-width: none;
   }
 }
+
+.portfolio-source-link {
+  display: inline-block;
+  margin-top: 2.5rem;
+
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.portfolio-source-link:hover {
+  color: var(--text);
+  transform: translateX(4px);
+}
