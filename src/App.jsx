@@ -6,6 +6,7 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Reveal from "./components/Reveal";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Reveal>
           <Contact />
         </Reveal>
+        <Footer />
       </main>
     </>
   );

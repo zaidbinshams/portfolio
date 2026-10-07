@@ -1,5 +1,5 @@
 .contact {
-  padding: 6rem 7rem 6rem;
+  padding: 6rem 7rem 3rem;
   box-sizing: border-box;
 }
 
@@ -144,7 +144,7 @@
 
 @media (max-width: 768px) {
   .contact {
-    padding: 5rem 1.5rem 6rem;
+    padding: 5rem 1.5rem 3rem;
   }
 
   .contact-content {
@@ -164,23 +164,4 @@
   .contact-form {
     max-width: none;
   }
-}
-
-.portfolio-source-link {
-  display: inline-block;
-  margin-top: 2.5rem;
-
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 300;
-
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.portfolio-source-link:hover {
-  color: var(--text);
-  transform: translateX(4px);
 }
